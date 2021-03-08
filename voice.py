@@ -45,6 +45,7 @@ def listen():  # Listens and Converts to text
 
 def changeLang(data,lang = "kn"): # Convert from English words to other language words
     if data != "":
+        r = sr.Recognizer()
         with sr.Microphone() as source:
                 print("start say...")
                 data = r.listen(source)
